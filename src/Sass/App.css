@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  color: white;
+  height: 100vh;
+  line-height: 1.5;
+}
+
+.titlte {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0;
+  color: white;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 0 15px;
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  height: 600px;
+}
+.wrapper .osnova_info {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.wrapper .tasks {
+  padding: 20px;
+  height: 400px;
+  background: black;
+  overflow: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  flex-direction: column;
+}
+.wrapper .tasks .description {
+  width: 100%;
+  text-align: center;
+}
+.wrapper .tasks .information_task {
+  height: 40px;
+  margin: 10px auto;
+  align-items: center;
+  outline: 1px solid white;
+  width: 400px;
+  max-width: 500px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .tasks .information_task .delete {
+  background-color: red;
+  transition: 0.5s;
+}
+.wrapper .tasks .information_task .delete:hover {
+  background-color: rgb(144, 134, 134);
+}
+.wrapper .tasks .information_task .edit {
+  background-color: green;
+  transition: 0.5s;
+}
+.wrapper .tasks .information_task .edit:hover {
+  background-color: rgb(144, 134, 134);
+}
+.wrapper .tasks .information_task .buttons {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .tasks .information_task .buttons button {
+  cursor: pointer;
+  width: 100%;
+  flex: 1;
+  border: none;
+  color: white;
+}
+.wrapper .tasks .information_task .title_id {
+  outline: 1px solid white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(6, 6, 6);
+}
+.wrapper .input_reserch {
+  padding: 5px;
+  max-width: 400px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .input_reserch input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 18px;
+}
+.wrapper .input_reserch input::-moz-placeholder {
+  color: #ccc;
+}
+.wrapper .input_reserch input:-ms-input-placeholder {
+  color: #ccc;
+}
+.wrapper .input_reserch input::placeholder {
+  color: #ccc;
+}
+.wrapper .input_reserch input:focus {
+  border: 1px solid rgb(10, 10, 10);
+}
+.wrapper .input_reserch button {
+  height: 100%;
+  cursor: pointer;
+  font-size: 17px;
+  background: RED;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+}
+.wrapper .input_reserch button:hover {
+  background: rgb(8, 7, 7);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .forms {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(255, 186, 186);
+}
+.modal .forms input {
+  padding: 10px 10px;
+  font-size: 15px;
+}
+.modal .forms button {
+  padding: 10px;
+}
+.modal .forms h1 {
+  text-align: center;
+}
+
+.error {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  background-color: red;
+}/*# sourceMappingURL=App.css.map */
