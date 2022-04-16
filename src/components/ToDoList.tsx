@@ -1,4 +1,5 @@
 import { ChangeEvent, FC, useEffect, useState } from "react";
+import { emitKeypressEvents } from "readline";
 import Modal from "./Modal";
 import Tasks from "./Tasks";
 
@@ -43,6 +44,11 @@ const ToDoList: FC = () => {
   const handleClickDel = () => {
     setTasks([]);
   };
+  const Keys = (e: any) => {
+    if (e.key === "Enter") {
+      handleClickAdd();
+    }
+  }
   return (
     <div className="container">
       <div className="wrapper">
@@ -56,14 +62,16 @@ const ToDoList: FC = () => {
 
         <div className="input_reserch">
           <input
+            onKeyDown={Keys}
             type="text"
             placeholder="Description..."
             value={task}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setTask(e.target.value)
+
             }
           />
-          <button onClick={handleClickAdd}>Add</button>
+          <button onClick={handleClickAdd} >Add</button>
           <button style={{ backgroundColor: "black" }} onClick={handleClickDel}>
             Delete
           </button>

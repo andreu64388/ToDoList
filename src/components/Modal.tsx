@@ -25,13 +25,22 @@ const Modal: FC<Props> = ({ state, tasks, setTasksFun, ChangeState }) => {
     setTasksFun(result);
     ChangeState();
   };
+  const Keys = (e: any) => {
+    if (e.key === "Enter") {
+      handleSave();
+    }
+  }
   return (
     <div className="modal">
+
+
+
       <div className="forms">
         <div className="osnova">
           <h1>Edit</h1>
 
           <input
+            onKeyDown={Keys}
             value={value}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setValue(e.target.value)
